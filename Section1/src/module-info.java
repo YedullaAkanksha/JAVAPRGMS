@@ -5,5 +5,5 @@
  * @author yakanksha
  *
  */
-module liveclass {
+module Section1 {
 }

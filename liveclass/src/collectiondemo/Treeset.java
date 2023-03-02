@@ -22,10 +22,10 @@ public class Treeset{
 		strset1.add("gh");
 		strset1.add("ui");
 		System.out.println(strset1);
-		Set<emp> e=new TreeSet<emp>();
-		e.add(new emp(1,"akki",15000,"A23"));
-		e.add(new emp(2,"a",1500,"A123"));
-		System.out.println(e);
+		Set<emp> emp=new TreeSet<emp>();
+		//emp.add(1,"akki",15000,"A23");
+		emp.add(new emp(2,"a",1500,"A123"));
+		System.out.println(emp);
 					}
 	private static Comparator<? super String> Stringcomparator() {
 		// TODO Auto-generated method stub
