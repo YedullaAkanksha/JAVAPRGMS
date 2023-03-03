@@ -1,13 +1,19 @@
 package threads;
 
-public class ThreadsDemo {
-	public static void main(String[] args) {
-		Thread t=new Thread();
-		MultiThread mt= new MultiThread();
-		mt.start();
-		SingleThread st=new SingleThread();
-		st.num();
-	}
+public class ThreadsDemo  extends Thread{
+		ThreadsDemo(){
+			
+		}
+			public void run() {
+				for(int i=1;i<=200;i++) {
+					System.out.println(Thread.currentThread().getName()+"-"+i);
+					try {
+						Thread.sleep(100);
+					}
+					catch(Exception e) {
+						e.printStackTrace();
+					}
+				}			}}
 
 class SingleThread{
 	void num() {
@@ -20,19 +26,12 @@ class SingleThread{
 				e.printStackTrace();
 			}
 		}
-	}}
-class MultiThread extends Thread{
-	MultiThread(){
-		
 	}
-		public void run() {
-			for(int i=1;i<=200;i++) {
-				System.out.println(Thread.currentThread().getName()+"-"+i);
-				try {
-					Thread.sleep(100);
-				}
-				catch(Exception e) {
-					e.printStackTrace();
-				}
-}}}
-}
+				
+				public static void main(String[] args) {
+					Thread t=new Thread();
+					ThreadsDemo mt= new ThreadsDemo();
+					mt.start();
+					SingleThread st=new SingleThread();
+					st.num();
+				}}
