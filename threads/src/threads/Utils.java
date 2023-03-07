@@ -1,7 +1,7 @@
 package threads;
 
 public class Utils {
-	public static void printmessage(String message) {
+	public static void printmessage(Object message) {
 		System.out.println(Thread.currentThread().getName()+ "-"+message);
 	}
 }
